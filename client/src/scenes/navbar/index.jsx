@@ -29,7 +29,7 @@ import FlexBetween from "components/FlexBetween";
 const NavbarPage = () => {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
   const dispatch = useDispatch();
-  const nagigate = useNavigate();
+  const navigate = useNavigate();
   const user = useSelector((state) => state.user);
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
 
@@ -41,7 +41,7 @@ const NavbarPage = () => {
   const alt = theme.palette.background.alt;
 
   //update app name and fix fullname to use ${firstName} ${lastName}
-  const fullName = `Matthew Williams`;
+  const fullName = `${user.firstName} ${user.lastName}`;
 
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
@@ -50,7 +50,7 @@ const NavbarPage = () => {
           fontWeight="bold"
           fontSize="clamp(1rem, 2rem, 2.25rem)"
           color="primary"
-          onClick={() => "/home"}
+          onClick={() => navigate("/home")}
           sx={{
             "&:hover": {
               color: primaryLight,

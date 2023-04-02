@@ -18,7 +18,7 @@ import { useState } from "react";
 
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("required"),
-  lasttName: yup.string().required("required"),
+  lastName: yup.string().required("required"),
   email: yup.string().email("invalid email").required("required"),
   password: yup.string().required("required"),
   location: yup.string().required("required"),
@@ -97,8 +97,9 @@ const Form = () => {
   };
 
   const handleFormSubmit = async (values, onSubmitProps) => {
+    console.log(values);
     if (isLogin) await login(values, onSubmitProps);
-    if (isRegister) await registerSchema(values, onSubmitProps);
+    if (isRegister) await register(values, onSubmitProps);
   };
 
   return (
