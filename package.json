@@ -1,0 +1,27 @@
+{
+  "name": "fullstack-social-media-app",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "v16.18.0",
+    "npm": "9.6.2"
+  },
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  },
+  "homepage": "https://github.com/matwll/fullstack-social-media-app",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "socket.io": "^4.6.1"
+  }
+}
