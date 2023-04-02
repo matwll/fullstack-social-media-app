@@ -2,7 +2,7 @@ import {
   EditOutlined,
   DeleteOutlined,
   AttachFileOutlined,
-  GiftBoxOutlined,
+  GifBoxOutlined,
   ImageOutlined,
   MicOutlined,
   MoreHorizOutlined,
@@ -126,7 +126,7 @@ const MyPostWidget = ({ picturePath }) => {
         {isNonMobileScreens ? (
           <>
             <FlexBetween gap="0.25rem">
-              <GiftBoxOutlined sx={{ color: mediumMain }} />
+              <GifBoxOutlined sx={{ color: mediumMain }} />
               <Typography color={mediumMain}>Clip</Typography>
             </FlexBetween>
             <FlexBetween gap="0.25rem">

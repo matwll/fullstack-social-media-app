@@ -12,8 +12,6 @@ import {
   Icon,
 } from "@mui/material";
 import {
-  LinkedInIcon,
-  TwitterIcon,
   Search,
   Message,
   DarkMode,

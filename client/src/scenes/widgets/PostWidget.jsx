@@ -1,10 +1,4 @@
-import { FavoriteBorderOutlined, FileCopy } from "@mui/icons-material";
-import {
-  ChatBubbleOutlineOutlined,
-  FavoriteBorderOutlines,
-  FavoriteOutlined,
-  ShareOutlined,
-} from "@mui/material";
+import { ChatBubbleOutlineOutlined, ShareOutlined } from "@mui/icons-material";
 import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
 import FlexBetween from "components/FlexBetween";
 import Friend from "components/Friend";
@@ -12,6 +6,8 @@ import WidgetWrapper from "components/WidgetWrapper";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "state";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 
 const PostWidget = ({
   postId,
@@ -56,7 +52,7 @@ const PostWidget = ({
         userPicturePath={userPicturePath}
       />
       <Typography color={main} sx={{ mt: "1rem" }}>
-        {ddesciption}
+        {description}
       </Typography>
       {picturePath && (
         <img
@@ -72,9 +68,9 @@ const PostWidget = ({
           <FlexBetween gap="0.3rem">
             <IconButton onClick={patchLike}>
               {isLiked ? (
-                <FavoriteOutlined sx={{ color: primary }} />
+                <FavoriteOutlinedIcon sx={{ color: primary }} />
               ) : (
-                <FavoriteBorderOutlined />
+                <FavoriteBorderOutlinedIcon />
               )}
             </IconButton>
             <Typography>{likeCount}</Typography>
